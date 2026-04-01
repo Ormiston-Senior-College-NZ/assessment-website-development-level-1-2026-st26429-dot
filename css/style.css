@@ -1,0 +1,248 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+/* Colour Palette */
+:root {
+    --blue: #7DB7FF;
+    --orange: #FFB77A;
+    --green: #A8F0C6;
+    --chakra-blue: #0A3D91;
+    --white: #FFFFFF;
+    --gold: #F4D27A;
+    --soft-bg: #FAFAF7;
+    --text-dark: #333;
+}
+
+/* Body */
+body {
+    background: var(--soft-bg);
+    color: var(--text-dark);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: var(--white);
+    border-bottom: 4px solid var(--orange);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--chakra-blue);
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--chakra-blue);
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background: var(--blue);
+    color: var(--white);
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(90deg, var(--orange), var(--white), var(--green), var(--blue));
+    background-size: 300% 300%;
+    animation: bannerFlow 10s ease infinite;
+}
+
+@keyframes bannerFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Hero */
+.hero {
+    height: 55vh;
+    background: url("images/diwali.jpeg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.small-hero {
+    height: 35vh;
+}
+
+.hero-text {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(10px);
+    padding: 35px 50px;
+    border-radius: 18px;
+    border: 2px solid rgba(255,255,255,0.4);
+    animation: fadeIn 1.2s ease;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: var(--chakra-blue);
+}
+
+.hero-text p {
+    font-size: 18px;
+}
+
+/* Fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Content */
+.content {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    border-left: 6px solid var(--blue);
+    padding-left: 10px;
+    color: var(--chakra-blue);
+}
+
+.content p,
+.content ul {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.content ul {
+    margin-left: 20px;
+}
+
+/* Main image */
+.main-img {
+    width: 100%;
+    border-radius: 14px;
+    margin-top: 15px;
+    border: 4px solid var(--gold);
+    transition: 0.3s;
+}
+
+.main-img:hover {
+    transform: scale(1.03);
+}
+
+/* Cards */
+.card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 16px;
+    margin: 25px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-left: 6px solid var(--blue);
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.card-img {
+    width: 100%;
+    border-radius: 14px;
+    margin-top: 12px;
+    border: 3px solid var(--gold);
+    transition: 0.3s;
+}
+
+.card-img:hover {
+    transform: scale(1.04);
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 14px;
+    border: 3px solid var(--gold);
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Join Form */
+.join-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.join-form input,
+.join-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.join-form textarea {
+    min-height: 100px;
+}
+
+.join-form button {
+    background: var(--chakra-blue);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.join-form button:hover {
+    background: var(--blue);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--chakra-blue);
+    color: white;
+    margin-top: 40px;
+}
+
